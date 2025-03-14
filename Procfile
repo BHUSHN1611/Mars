@@ -1,3 +1,4 @@
-web: sh setup.sh && streamlit run app.py
+web: bash download_files.sh && streamlit run app.py
+
 
 
