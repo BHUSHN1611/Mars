@@ -7,20 +7,14 @@ This project is a web-based platform that allows users to explore trending movie
 ## 🚀 Features  
 ### ✅ Movies  
 - Fetches a list of popular, top-rated, and trending movies from the TMDB API.  
-- Displays details like **title, overview, rating, release date**, and **poster**.  
-- Allows filtering and sorting by genre, rating, and release year.  
+- Displays details like **title,rating,and **poster**.    
 
 ### ✅ Series  
 - Fetches a list of popular, top-rated, and trending TV series from the TMDB API.  
-- Displays details like **title, overview, rating, seasons**, and **poster**.  
-- Supports filtering and sorting by genre, rating, and release year.  
+- Displays details like **title, rating,and **poster**.  
 
 ### ✅ AI-Based Recommendation  
-- Uses AI to recommend movies and series based on:  
-  - User’s watch history  
-  - Genre preferences  
-  - Similar content (based on TMDB’s similarity scoring)  
-- Provides a "You May Also Like" section powered by AI.  
+- Uses AI to recommend movies and series. 
 
 ### ✅ Trending Movies  
-- Displays real-time trending movies using the TMDB API’s trending endpoint:  
+- Displays real-time trending movies using the TMDB API’s trending endpoint:
