@@ -37,7 +37,7 @@ series_similarity = pickle.load(open("series_similarity.pkl", "rb"))
 # It makes the poster href link and other can also be retried
 def fetch_poster(movie_id):
     response = requests.get(
-        'https://api.themoviedb.org/3/movie/{}?api_key=621f11a3e889718c83d29d87d900be79&language=en-US'.format(
+        'https://api.themoviedb.org/3/movie/{}?api_key=api-key&language=en-US'.format(
             movie_id))
     data = response.json()
 
@@ -46,7 +46,7 @@ def fetch_poster(movie_id):
 
 def fetch_movie_rating(movie_id):
     response = requests.get(
-        'https://api.themoviedb.org/3/movie/{}?api_key=621f11a3e889718c83d29d87d900be79&language=en-US'.format(
+        'https://api.themoviedb.org/3/movie/{}?api_key=api-key&language=en-US'.format(
             movie_id))
     r_data = response.json()
     return r_data['vote_average']
@@ -167,18 +167,18 @@ def ai_rec():
 
 def fetch_ai_movie_series_poster(aimname):
     response = requests.get(
-        "https://api.themoviedb.org/3/search/tv?api_key=621f11a3e889718c83d29d87d900be79&query={}".format(aimname))
+        "https://api.themoviedb.org/3/search/tv?api_key=api-key&query={}".format(aimname))
     data = response.json()
     return "https://image.tmdb.org/t/p/w500" + data['results'][0]['poster_path']
 def fetch_ai_movie_serie_rating(ainame):
     response = requests.get(
-        "https://api.themoviedb.org/3/search/tv?api_key=621f11a3e889718c83d29d87d900be79&query={}".format(ainame))
+        "https://api.themoviedb.org/3/search/tv?api_key=api-key&query={}".format(ainame))
     data = response.json()
     ai_rating_conv = float(data["results"][0]["vote_average"])
     return ai_rating_conv
 def fetch_ai_movie_serie_title(ainame):
     response = requests.get(
-        "https://api.themoviedb.org/3/search/tv?api_key=621f11a3e889718c83d29d87d900be79&query={}".format(ainame))
+        "https://api.themoviedb.org/3/search/tv?api_key=api-key&query={}".format(ainame))
     data = response.json()
     ai_title = data["results"][0]["original_name"]
     return ai_title
@@ -187,7 +187,7 @@ def fetch_ai_movie_serie_title(ainame):
 def display_popular_movies():
     try:
 
-        popular_movies_response = requests.get("https://api.themoviedb.org/3/trending/movie/day?api_key=621f11a3e889718c83d29d87d900be79&language=en-US")
+        popular_movies_response = requests.get("https://api.themoviedb.org/3/trending/movie/day?api_key=api-key&language=en-US")
         # popular_movies_response="https://api.themoviedb.org/3/trending/movie/week?api_key=621f11a3e889718c83d29d87d900be79"
         popular_movies_response_data = popular_movies_response.json()
         st.header("Trending Movies",divider = 'red') # title
