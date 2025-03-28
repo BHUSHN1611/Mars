@@ -124,7 +124,7 @@ def rtr_rs():
 def ai_rec():
     client = OpenAI(
         base_url="https://openrouter.ai/api/v1",
-        api_key="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",
+        api_key="api-key",
     )
     prompt = rtr_rs()
     # API request
